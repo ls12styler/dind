@@ -1,6 +1,6 @@
 FROM alpine:latest as builder
 
-ARG DOCKER_CLI_VERSION="18.06.3-ce"
+ARG DOCKER_CLI_VERSION="18.09.2"
 ENV DOCKER_DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION.tgz"
 
 # install docker client
