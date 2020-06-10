@@ -1,6 +1,6 @@
 FROM alpine:latest as builder
 
-ARG DOCKER_CLI_VERSION="18.09.2"
+ARG DOCKER_CLI_VERSION="19.03.9"
 ENV DOCKER_DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION.tgz"
 
 # install docker client
@@ -10,7 +10,7 @@ RUN apk --update add curl \
     && mv /tmp/download/docker/docker /usr/local/bin/ \
     && chmod +x /usr/local/bin/docker
 
-ARG DOCKER_COMPOSE_VERSION="1.24.1"
+ARG DOCKER_COMPOSE_VERSION="1.26.1"
 ENV COMPOSE_DOWNLOAD_URL="https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-Linux-x86_64"
 
 # install docker-compose
